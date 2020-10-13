@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    RELEASE_IMAGE = 'docker-registry.felix.com:5000/platform/service-registry-center'
+    RELEASE_IMAGE = 'registry.felix.com/platform/service-registry-center'
     IMAGE_VERSION = '1.0'
   }
   
