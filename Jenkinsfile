@@ -18,7 +18,7 @@ pipeline {
     stage('build image') {
       steps {
         echo 'start to build image......'
-        sh 'docker build ${RELEASE_IMAGE}:${IMAGE_VERSION} .'
+        sh 'docker build -t ${RELEASE_IMAGE}:${IMAGE_VERSION} -f Dockerfile .'
         echo 'complete  ${RELEASE_IMAGE}:${IMAGE_VERSION} image building and start to push the image......'
         sh 'docker push ${RELEASE_IMAGE}:${MAGE_VERSION}'
         echo 'completed the image push'
